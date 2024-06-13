@@ -14,11 +14,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.test.tugasadvancetim.data.model
+import com.test.tugasadvancetim.domain.model.Team
 import com.test.tugasadvancetim.ui.theme.TugasAdvanceTimTheme
 
 @Composable
 fun Item (
-    model: model,
+    Team: Team,
     modifier: Modifier = Modifier,
     onItemClicked: (Int) -> Unit
 ) {
@@ -27,7 +28,7 @@ fun Item (
         modifier = modifier
             .fillMaxWidth()
             .clickable {
-                onItemClicked(model.id)
+                onItemClicked(Team.id)
             }
     ) {
 //        Image(
@@ -37,10 +38,10 @@ fun Item (
 //        )
         Spacer(modifier = Modifier.width(16.dp))
         Column {
-            Text(text = model.name, style = MaterialTheme.typography.titleMedium)
+            Text(text = Team.name, style = MaterialTheme.typography.titleMedium)
             Row {
                 Text(text = "Role :")
-                Text(text = model.role, color = MaterialTheme.colorScheme.primary)
+                Text(text = Team.role, color = MaterialTheme.colorScheme.primary)
             }
         }
     }
@@ -48,18 +49,18 @@ fun Item (
 
 @Preview(showBackground = true)
 @Composable
-private fun modelitem() {
+private fun Prev() {
     TugasAdvanceTimTheme {
         Item(
-            model = model(
+            Team = Team(
                 1,
                 "Muhammad Fadil",
                 "Hecker",
-                3.535317089063918,
-                98.6628990959129,
+                "3.535317089063918",
+                "98.6628990959129",
             ),
-            onItemClicked = { modelId ->
-                println("Berita : $modelId")
+            onItemClicked = { timId ->
+                println("Berita : $timId")
             }
         )
     }

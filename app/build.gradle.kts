@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -68,4 +71,44 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    kapt(libs.androidx.hilt.compiler)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
+    // extended icons
+//    implementation(libs.androidx.material.icons.extended)
+
+    // coil image
+//    implementation(libs.coil.compose)
+
+    // accompanist
+//    implementation(libs.accompanist.systemuicontroller)
+
+    // exoplayer
+//    implementation(libs.androidx.media3.exoplayer)
+//    implementation(libs.androidx.media3.ui)
+
+    // Lottie
+//    implementation(libs.lottie.compose)
+
+    //Data-Store
+//    implementation(libs.androidx.datastore.preferences)
+
+    //Lifecycle
+//    implementation(libs.androidx.lifecycle.runtime.compose)
+//    implementation(libs.androidx.lifecycle.viewmodel.compose)
 }

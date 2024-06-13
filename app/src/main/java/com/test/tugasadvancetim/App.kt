@@ -31,16 +31,7 @@ fun App(
             modifier = modifier.padding(contentPadding)
         ) {
             composable(Screen.Profile.route) {
-                Profile(navController)
-            }
-            composable(
-                Screen.Detail.route + "/{timId}",
-                arguments = listOf(navArgument("timId") { type = NavType.IntType })
-            ) { navBackStackEntry ->
-                DetailtimScreen(
-                    navController = navController,
-                    timId = navBackStackEntry.arguments?.getInt("timId")
-                )
+               profileScreen(navController = navController)
             }
         }
     }
