@@ -29,7 +29,7 @@ fun TopAppBarTeam(
         },
         title = {
             Text(
-                text = "Task",
+                text = "Tambahkan informasi",
                 style = MaterialTheme.typography.headlineSmall
             )
         },

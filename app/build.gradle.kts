@@ -93,6 +93,10 @@ dependencies {
     //maps
     implementation(libs.maps.compose)
 
+    //Shared & Data Storage
+    implementation (libs.androidx.datastore.preferences)
+    implementation (libs.androidx.material.icons.extended)
+
     // extended icons
 //    implementation(libs.androidx.material.icons.extended)
 
