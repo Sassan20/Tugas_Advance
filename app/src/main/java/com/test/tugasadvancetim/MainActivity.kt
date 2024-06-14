@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.test.tugasadvancetim.ui.theme.TugasAdvanceTimTheme
+import com.test.tugasadvancetim.view.AppTeam
+
 //import dagger.hilt.android.AndroidEntryPoint
 
 //@AndroidEntryPoint
@@ -21,7 +23,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TugasAdvanceTimTheme {
-                    App()
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    AppTeam(modifier = Modifier.padding(innerPadding))
+                }
             }
         }
     }

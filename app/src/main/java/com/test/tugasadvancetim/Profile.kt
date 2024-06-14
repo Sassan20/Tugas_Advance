@@ -21,12 +21,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.test.tugasadvancetim.data.DummyData
-import com.test.tugasadvancetim.data.model
 import com.test.tugasadvancetim.data.sqlite.DatabaseHelper
 import com.test.tugasadvancetim.domain.model.Team
-import com.test.tugasadvancetim.navigation.Screen
-import kotlinx.coroutines.launch
 
 @Composable
 fun profileScreen(
