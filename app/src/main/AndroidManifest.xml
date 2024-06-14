@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TugasAdvanceTim"
         tools:targetApi="31">
+        <!--         Google Maps API Key-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAyvMyM_-fqeIBXEHR6N5NBDR_oX8jScjk" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -90,6 +90,9 @@ dependencies {
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
+    //maps
+    implementation(libs.maps.compose)
+
     // extended icons
 //    implementation(libs.androidx.material.icons.extended)
 
