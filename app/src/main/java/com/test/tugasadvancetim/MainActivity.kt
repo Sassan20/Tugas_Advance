@@ -23,9 +23,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.navigation.NavController
 import com.test.tugasadvancetim.ui.theme.TugasAdvanceTimTheme
 import com.test.tugasadvancetim.view.AppTeam
 import com.test.tugasadvancetim.view.LoginScreen
+import com.test.tugasadvancetim.view.navigation.TeamNavGraph
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
@@ -40,9 +42,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             TugasAdvanceTimTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
-                    LoginScreen()
-//                    innerPadding ->
-//                    AppTeam(modifier = Modifier.padding(innerPadding))
+                    innerPadding ->
+                    AppTeam(modifier = Modifier.padding(innerPadding))
                 }
             }
         }

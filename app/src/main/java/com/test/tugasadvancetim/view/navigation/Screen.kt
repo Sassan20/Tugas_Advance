@@ -5,4 +5,6 @@ sealed class Screen(val route: String) {
     data object Team : Screen("team/{id}") {
         fun createRoute(id: Int?) = "team/$id"
     }
+    data object Login : Screen("login")
+
 }
